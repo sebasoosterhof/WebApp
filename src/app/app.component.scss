@@ -1,0 +1,35 @@
+@import '../styles.scss';
+
+.wrapper {
+    overflow: hidden;
+}
+
+h1 {
+    font-size: 3rem;
+    font-family: 'Roboto', sans-serif;
+}
+
+.header-content {
+    height: 80px;
+    background-color: lightskyblue;
+}
+
+.header-buttons {
+    height: 80px;
+    background-color: lightsteelblue;
+}
+
+.left {
+    height: 200px;
+    background-color: red;
+}
+
+.middle {
+    height: 4000px;
+    background-color: lightgrey;
+}
+
+.right {
+    height: 200px;
+    background-color: blue;
+}
