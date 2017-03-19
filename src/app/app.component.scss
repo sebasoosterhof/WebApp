@@ -1,18 +1,21 @@
+@import '../styles.scss';
+
 .wrapper {
     overflow: hidden;
 }
 
 h1 {
     font-size: 3rem;
+    font-family: 'Roboto', sans-serif;
 }
 
 .header-content {
-    height: 100px;
+    height: 80px;
     background-color: lightskyblue;
 }
 
 .header-buttons {
-    height: 100px;
+    height: 80px;
     background-color: lightsteelblue;
 }
 
