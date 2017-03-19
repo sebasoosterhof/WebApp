@@ -9,14 +9,27 @@ h1 {
     font-family: 'Roboto', sans-serif;
 }
 
-.dash-content {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.header-content {
+    height: 80px;
+    background-color: lightskyblue;
 }
 
-.gallery-content {
-    display: flex;
-    justify-content: center;
-    margin: auto;
+.header-buttons {
+    height: 80px;
+    background-color: lightsteelblue;
+}
+
+.left {
+    height: 200px;
+    background-color: red;
+}
+
+.middle {
+    height: 4000px;
+    background-color: lightgrey;
+}
+
+.right {
+    height: 200px;
+    background-color: blue;
 }
