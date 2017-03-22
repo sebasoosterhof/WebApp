@@ -16,31 +16,31 @@ export class LoginComponent implements OnInit {
     constructor(public af: AngularFire, private router: Router) {
       this.af.auth.subscribe(auth => {
         if (auth) {
-          this.router.navigateByUrl('/members');
+          this.router.navigateByUrl('/');
         }
       });
     }
 
-    loginFB() {
+    public loginFB() {
       this.af.auth.login({
         provider: AuthProviders.Facebook,
         method: AuthMethods.Popup,
       }).then(
         (success) => {
-          this.router.navigate(['/members']);
+          this.router.navigate(['home']);
         }).catch(
           (err) => {
             this.error = err;
           });
     }
 
-    loginGoogle() {
+   public loginGoogle() {
       this.af.auth.login({
         provider: AuthProviders.Google,
         method: AuthMethods.Popup,
       }).then(
         (success) => {
-          this.router.navigate(['/members']);
+          this.router.navigate(['home']);
         }).catch(
           (err) => {
             this.error = err;
