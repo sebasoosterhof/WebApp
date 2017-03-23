@@ -1,29 +1,31 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { AngularFire, AuthProviders, AuthMethods } from 'angularfire2';
-import { moveIn, fallIn, moveInLeft } from 'app/router.animations';
+import { Http } from '@angular/http';
 
 
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
-  styleUrls: ['./home.component.scss'],
-  animations: [moveIn(), fallIn(), moveInLeft()],
-  host: { '[@moveIn]': '' }
+  styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit {
+  spaceScreens: Array<any>;
 
 
   name: any;
   // tslint:disable-next-line:no-inferrable-types
   state: string = '';
 
-  constructor(public af: AngularFire, private router: Router) {
+  constructor(public af: AngularFire, private router: Router, private http: Http) {
     this.af.auth.subscribe(auth => {
       if (auth) {
         this.name = auth;
       }
     });
+    this.http.get('../../src/data.json')
+      .map(response => response.json().screenshots)
+      .subscribe(res => this.spaceScreens = res);
   }
 
   logout() {
@@ -33,6 +35,20 @@ export class HomeComponent implements OnInit {
 
   public ngOnInit() {
 
+  }
+
+   public likeMe(i) {
+    if (this.spaceScreens[i].liked === 0) {
+      this.spaceScreens[i].liked = 1;
+    }
+    else {
+      this.spaceScreens[i].liked = 0;
+    }
+  }
+
+  public deleteMe(i) {
+    this.spaceScreens.splice(i, 1);
+    console.log(i);
   }
 
 }
