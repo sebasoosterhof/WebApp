@@ -1,0 +1,44 @@
+#logo {
+    width: 50%;
+    margin: 1.5em auto 4em auto;
+    display: block;
+}
+
+#fb {
+    background: #3D62B3;
+    color: #fff;
+}
+
+#google {
+    background-color: #D34836;
+    color: #fff;
+} 
+
+// #email {
+//     background-image: 'assets/images/logos/email.svg' no-repeat 14px 6px;    
+//     // background: #ECECEC  url('assets/images/logos/email.svg') no-repeat 25px;
+//     background-size: 25px;
+// }
+
+@media (max-width: 600px) {
+    #page {
+        padding: 1em;
+    }
+    #toolbar {
+        width: 90%;
+        margin-left: -45%;
+    }
+    #fb {
+        background: #3D62B3;
+        color: #fff;
+    }
+
+    #google {
+        background: #D34836;
+        color: #fff;
+    }
+
+    // #email {
+    //     background: #ECECEC;
+    // }
+}

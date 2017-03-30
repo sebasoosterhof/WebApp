@@ -3,6 +3,18 @@
 
 @import '~@angular/material/core/theming/all-theme';
 
+body {
+    background:#fff;
+}
+
+.form-container {
+    background:white;
+    padding:3.5em;
+    width:500px;
+    position:fixed;
+    left:50%;
+    margin-left:-250px;
+}
 
 .spacer {
     -webkit-box-flex: 1;
@@ -28,6 +40,107 @@ label {
     padding: 0 1.5em 1.5em 1.5em;
 }
 
+.mat-tab-body {
+    overflow-y: hidden !important; 
+}
 .mat-card {
     margin-bottom: 1rem;
+}
+
+.mat-card-image {
+    margin: 0 !important;
+}
+
+
+button {
+    padding:1.2em;
+    width:100%;
+    cursor:pointer;
+    margin-bottom:15px;
+    font-size:1.3em;
+}
+
+.basic-btn {
+    background: #3B8598;
+    color:white;
+}
+
+input.txt {
+    background:#fff !important;
+    padding:1.3em 1em;
+    font-size:1.3em;
+    border: 1px solid #BBBBBB;
+}
+
+h2 {
+    margin: 1.7em 0 .9em 0;
+}
+
+.alc {
+    text-align:center;
+    display:block;
+    margin: 15px 0;
+    color: #F44336;
+}
+
+.error {
+    background:#f1f0ef;
+    padding:1em;
+    width:100%;
+    display:block;
+    margin-bottom:20px;
+}
+
+#goback {
+    font-weight:bold;
+    text-transform:uppercase;
+    font-size:.8em;
+    color:#3B8598;
+}
+#goback span {
+    font-size:1em;
+}
+
+
+// Loader
+.loader-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.pulse-loader {
+    margin-top: 15%;
+    margin-left: -5%;
+    width: 280px;
+    height: 280px;
+    background-position-x: 100%;
+    background-repeat: no-repeat;
+    background-position-y: 100%;
+}
+
+.pulse {
+	animation-name: pulse_animation;
+	animation-duration: 5000ms;
+	transform-origin:70% 70%;
+	animation-iteration-count: infinite;
+	animation-timing-function: linear;
+}
+
+@keyframes pulse_animation {
+	0% { transform: scale(1); }
+	30% { transform: scale(1); }
+	40% { transform: scale(1.08); }
+	50% { transform: scale(1); }
+	60% { transform: scale(1); }
+	70% { transform: scale(1.05); }
+	80% { transform: scale(1); }
+	100% { transform: scale(1); }
+}
+
+
+@media (max-width: 600px) {
+    .pulse-loader {
+      margin-top: 40%;
+    }
 }

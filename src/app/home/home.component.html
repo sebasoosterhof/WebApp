@@ -1,15 +1,14 @@
-
 <!--Toolbar-->
-<!--<md-toolbar color="primary">
+<md-toolbar color="primary">
   <span>EASTCOURT</span>
   <span class="spacer"></span>
   <button md-icon-button [mdMenuTriggerFor]="menu">
     <md-icon>more_vert</md-icon>
   </button>
   <md-menu #menu="mdMenu">
-    <button md-menu-item>
+    <button (click)="logout()" md-menu-item>
       <md-icon>fingerprint</md-icon>
-      <span>Login</span>
+      <span>Logout</span>
     </button>
     <button md-menu-item>
       <md-icon>announcement</md-icon>
@@ -20,19 +19,21 @@
       <span>Disable alerts</span>
     </button>
   </md-menu>
-</md-toolbar>-->
+</md-toolbar>
 
 <!--Tabs-->
-<!--<md-tab-group>
+<md-tab-group>
   <md-tab label="Dashboard">
     <div class="page-padding">
-      <h1>I'm alive bitches</h1>
+      <h2>Hey {{ name.auth.displayName }}!</h2>
+      <h3>I'm alive bitches</h3>
     </div>
   </md-tab>
   <md-tab label="Video's">
     <div class="columns">
       <div class="content-left column is-2"></div>
       <div class="content-middle column is-8">
+        <!--<img src="../../assets/images/loader/ripple.gif" />-->
 
         <div class="cards" *ngFor="let spaceScreen of spaceScreens; let i = index">
           <md-card>
@@ -66,7 +67,4 @@
       <md-slide-toggle>Some setting</md-slide-toggle>
     </div>
   </md-tab>
-</md-tab-group>-->
-
-
-<router-outlet></router-outlet>
+</md-tab-group>

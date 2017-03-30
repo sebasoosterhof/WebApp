@@ -5,9 +5,7 @@
   <meta charset="utf-8">
   <title>Eastcourt</title>
   <base href="./">
-
-  <script src="https://www.gstatic.com/firebasejs/3.7.2/firebase.js"></script>
-  <script>
+  <!--<script>
     // Initialize Firebase
     var config = {
       apiKey: "AIzaSyC-7oulCI6TY5-BIULxzu0YWB4IR5Kgl7U",
@@ -17,16 +15,34 @@
       messagingSenderId: "280928061969"
     };
     firebase.initializeApp(config);
-  </script>
+  </script>-->
+
+  <script src="https://www.gstatic.com/firebasejs/3.7.2/firebase.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/3.7.2/firebase.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/3.7.3/firebase.js"></script>
 
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,400italic">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="icon" type="image/x-icon" href="favicon.ico">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32">
+  <link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16">
+  <link rel="manifest" href="/manifest.json">
+  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#f44336">
+  <meta name="apple-mobile-web-app-title" content="Eastcourt">
+  <meta name="application-name" content="Eastcourt">
+  <meta name="theme-color" content="#D50000">
+  <meta name="display" content="standalone">
 </head>
 
 <body>
-  <app-root>Laden...</app-root>
+  <app-root>
+    <div class="loader-content">
+      <div class='pulse-loader pulse' style="background-image: url('assets/images/loader/eastcourt-logo.png')"><div>
+        </div>
+  </app-root>
 </body>
 
 </html>
