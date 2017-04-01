@@ -4,7 +4,7 @@ import { Router } from '@angular/router';
 import { moveIn } from '../router.animations';
 
 @Component({
-  selector: 'app-login',
+  selector: 'ead-login',
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.scss'],
   animations: [moveIn()],

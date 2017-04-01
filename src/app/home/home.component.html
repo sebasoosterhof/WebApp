@@ -1,6 +1,6 @@
 <!--Toolbar-->
 <md-toolbar color="primary">
-  <span>EASTCOURT</span>
+  <span>Eastcourt</span>
   <span class="spacer"></span>
   <button md-icon-button [mdMenuTriggerFor]="menu">
     <md-icon>more_vert</md-icon>
@@ -23,18 +23,19 @@
 
 <!--Tabs-->
 <md-tab-group>
+  <!--First tab-->
   <md-tab label="Dashboard">
     <div class="page-padding">
       <h2>Hey {{ name.auth.displayName }}!</h2>
       <h3>I'm alive bitches</h3>
     </div>
   </md-tab>
+
+  <!--Second tab-->
   <md-tab label="Video's">
     <div class="columns">
       <div class="content-left column is-2"></div>
       <div class="content-middle column is-8">
-        <!--<img src="../../assets/images/loader/ripple.gif" />-->
-
         <div class="cards" *ngFor="let spaceScreen of spaceScreens; let i = index">
           <md-card>
             <img md-card-image src="{{ spaceScreen.img }}">
@@ -56,10 +57,10 @@
       <div class="content-right column is-2"></div>
     </div>
 
+<!--Third tab-->
   </md-tab>
   <md-tab label="Settings">
     <div class="page-padding">
-      <h1>Settings</h1>
       <p>Here you can control the various settings associated with your app.</p>
       <label>Number of Thumbnails</label>
       <md-slider showTicks="true" max="100" min="0" step="1" thumbLabel="true" value="18">

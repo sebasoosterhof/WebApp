@@ -5,7 +5,7 @@ import { Http } from '@angular/http';
 
 
 @Component({
-  selector: 'app-home',
+  selector: 'ead-home',
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss']
 })
@@ -14,8 +14,7 @@ export class HomeComponent implements OnInit {
 
 
   name: any;
-  // tslint:disable-next-line:no-inferrable-types
-  state: string = '';
+  state = '';
 
   constructor(public af: AngularFire, private router: Router, private http: Http) {
     this.af.auth.subscribe(auth => {
@@ -34,7 +33,6 @@ export class HomeComponent implements OnInit {
   }
 
   public ngOnInit() {
-
   }
 
    public likeMe(i) {
