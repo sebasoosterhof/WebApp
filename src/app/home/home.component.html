@@ -1,6 +1,6 @@
 <!--Toolbar-->
 <md-toolbar color="primary">
-  <span>Eastcourt</span>
+  <span>Vembr</span>
   <span class="spacer"></span>
   <button md-icon-button [mdMenuTriggerFor]="menu">
     <md-icon>more_vert</md-icon>
@@ -22,6 +22,7 @@
 </md-toolbar>
 
 <!--Tabs-->
+
 <md-tab-group>
   <!--First tab-->
   <md-tab label="Dashboard">
@@ -33,10 +34,10 @@
 
   <!--Second tab-->
   <md-tab label="Video's">
-    <div class="columns">
-      <div class="content-left column is-2"></div>
-      <div class="content-middle column is-8">
-        <div class="cards" *ngFor="let spaceScreen of spaceScreens; let i = index">
+    <div class="page-padding">
+      <div fxFlex="20" class="content-left"></div>
+      <div fxFlex="60" class="content-middle">
+        <div class="cards shadow-1dp-half" *ngFor="let spaceScreen of spaceScreens; let i = index">
           <md-card>
             <img md-card-image src="{{ spaceScreen.img }}">
             <md-card-content>
@@ -54,10 +55,10 @@
         </div>
 
       </div>
-      <div class="content-right column is-2"></div>
+      <div fxFlex="20" class="content-right column is-2"></div>
     </div>
 
-<!--Third tab-->
+    <!--Third tab-->
   </md-tab>
   <md-tab label="Settings">
     <div class="page-padding">
